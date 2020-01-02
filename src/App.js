@@ -6,8 +6,11 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1>Users</h1>
+        <h1>User profile</h1>
         <Users />
+        <a href="https://icons8.com/icon/124191/marker">
+          Marker icon by Icons8
+        </a>
       </div>
     </div>
   );
