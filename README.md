@@ -12,7 +12,7 @@ This application uses Bootstrap (https://getbootstrap.com/).
 The maps displayed on this app were created using leaflet (http://leafletjs.com/).
 The marker icon was providded by Icons8 (https://icons8.com/icon/124191/marker).
 
-You can fin React commands bellow:
+You can find React commands bellow:
 
 ## Available Scripts
 
