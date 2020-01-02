@@ -47,7 +47,7 @@ export default function Profile() {
           <div className="row">
             <div className="col-sm-6">
               <h1 className="name">{userData.name}</h1>
-              <smal>{userData.username}</smal>
+              <small>{userData.username}</small>
               <h2 className="company">{userData.company}</h2>
               <span className="business">{userData.business}</span>
               <p>"{userData.slogan}"</p>
