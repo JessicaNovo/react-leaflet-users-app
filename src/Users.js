@@ -19,6 +19,7 @@ export default function Users() {
         <h1 className="main-title">User profile</h1>
         <div className="row">
           {userData.map(function(user) {
+            console.log(user.id);
             return (
               <div className="col-sm-4 user-cards" key={user.id}>
                 <div className="card">
@@ -33,7 +34,11 @@ export default function Users() {
                     <li className="list-group-item">Email: {user.email}</li>
                   </ul>
                   <div className="card-body">
-                    <Link to={"/Profile"}>Read more</Link>
+                    <Link
+                      to={{ pathname: "/Profile", state: { user: user.id } }}
+                    >
+                      Read more
+                    </Link>
                   </div>
                 </div>
               </div>

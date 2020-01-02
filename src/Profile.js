@@ -6,29 +6,33 @@ import { Map, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
-export default function Profile() {
+export default function Profile(props) {
+  console.log();
+
   function handleData(response) {
     setUserData({
-      name: response.data[0].name,
-      username: response.data[0].username,
-      email: response.data[0].email,
-      phone: response.data[0].phone,
-      website: response.data[0].website,
-      company: response.data[0].company.name,
-      business: response.data[0].company.bs,
-      slogan: response.data[0].company.catchPhrase,
-      street: response.data[0].address.street,
-      suite: response.data[0].address.suite,
-      city: response.data[0].address.city,
-      zipcode: response.data[0].address.zipcode,
-      latitude: response.data[0].address.geo.lat,
-      longitude: response.data[0].address.geo.lng
+      name: response.data[number - 1].name,
+      username: response.data[number - 1].username,
+      email: response.data[number - 1].email,
+      phone: response.data[number - 1].phone,
+      website: response.data[number - 1].website,
+      company: response.data[number - 1].company.name,
+      business: response.data[number - 1].company.bs,
+      slogan: response.data[number - 1].company.catchPhrase,
+      street: response.data[number - 1].address.street,
+      suite: response.data[number - 1].address.suite,
+      city: response.data[number - 1].address.city,
+      zipcode: response.data[number - 1].address.zipcode,
+      latitude: response.data[number - 1].address.geo.lat,
+      longitude: response.data[number - 1].address.geo.lng
     });
     setReady(true);
   }
 
   const [userData, setUserData] = useState("");
   const [ready, setReady] = useState(false);
+
+  let number = props.location.state.user;
 
   let marker = L.icon({
     iconUrl: "https://img.icons8.com/plasticine/100/000000/marker.png",
@@ -79,7 +83,7 @@ export default function Profile() {
             </div>
             <div className="col-sm-6">
               <Map
-                className="map"
+                className="map one"
                 center={[userData.latitude, userData.longitude]}
                 zoom={2}
               >
