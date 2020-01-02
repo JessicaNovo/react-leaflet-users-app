@@ -7,8 +7,6 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
 export default function Profile(props) {
-  console.log();
-
   function handleData(response) {
     setUserData({
       name: response.data[number - 1].name,

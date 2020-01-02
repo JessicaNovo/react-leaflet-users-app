@@ -1,5 +1,19 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+On the main page you can find the profile cards of all the users fetched from this JSON (https://jsonplaceholder.typicode.com/users), with their name, company name and contact information (phone and email).
+
+As you scroll down the page you'll find a map with the location of all users pinned. If you click on a marker, you'll see who is the user on that location, their company and city. You can also zoom in/out on the map.
+
+If you click on the "Read more" link in each card, you'll find the user personal profile page where you can learn more about them, as well as check their location on the map.
+
+References:
+React Router (https://www.npmjs.com/package/react-router) was used to create this multiple page application.
+This application uses Bootstrap (https://getbootstrap.com/).
+The maps displayed on this app were created using leaflet (http://leafletjs.com/).
+The marker icon was providded by Icons8 (https://icons8.com/icon/124191/marker).
+
+You can fin React commands bellow:
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -40,29 +54,3 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
