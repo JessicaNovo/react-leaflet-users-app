@@ -22,7 +22,7 @@ export default function UsersMap() {
   if (ready) {
     return (
       <div className="UsersMap">
-        <h2>User Location</h2>
+        <h2 className="map-title">User Location</h2>
         <Map className="map" center={[-43.9509, -34.4618]} zoom={2}>
           <TileLayer
             attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -46,6 +46,9 @@ export default function UsersMap() {
             );
           })}
         </Map>
+        <a href="https://icons8.com/icon/124191/marker" className="credits">
+          Marker icon by Icons8
+        </a>
       </div>
     );
   } else {

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Users.css";
 import UsersMap from "./UsersMap";
+import { Link } from "react-router-dom";
 
 export default function Users() {
   function handleData(response) {
@@ -15,6 +16,7 @@ export default function Users() {
   if (ready) {
     return (
       <div className="Users">
+        <h1 className="main-title">User profile</h1>
         <div className="row">
           {userData.map(function(user) {
             return (
@@ -31,9 +33,7 @@ export default function Users() {
                     <li className="list-group-item">Email: {user.email}</li>
                   </ul>
                   <div className="card-body">
-                    <a href=" " className="card-link">
-                      Read more
-                    </a>
+                    <Link to={"/Profile"}>Read more</Link>
                   </div>
                 </div>
               </div>
